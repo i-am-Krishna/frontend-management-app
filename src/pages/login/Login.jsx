@@ -35,6 +35,7 @@ const Login = () => {
         email:formData.email,
         password:formData.password},{ withCredentials: true })  
         localStorage.setItem('userName',response.data.user.name)
+        localStorage.setItem('userEmail',response.data.user.email)
       toast.success(response.data.message)
       navigate('/')
     } catch (err) {

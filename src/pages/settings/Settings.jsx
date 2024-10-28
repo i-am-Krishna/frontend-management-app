@@ -16,6 +16,8 @@ const Settings = () => {
     password:'',
     new_password:''
   })
+  const userEmail = localStorage.getItem('userEmail');
+  const userName = localStorage.getItem('userName');
 
   const handleTaskChange = (e) => {
     const {name,value} = e.target
@@ -27,6 +29,10 @@ const Settings = () => {
 
   const handleSubmit=async(e)=>{
       e.preventDefault();
+      if(formData.name && formData.new_password && formData.password && formData.email){
+          toast.error('Please update name email or password field in one time!!!')
+          return
+      }
     try {
       const response = await axios.patch(`${process.env.REACT_APP_BACKEND_URL}/api/v1/user`,formData,{ withCredentials: true });  
       toast.success(response.data.message);
@@ -44,10 +50,10 @@ const Settings = () => {
       <div className={styles.headings}>Settings</div>
       <div className={styles.form}>
         <form className={styles.inputs}>
-      <div className={styles.input_box}> <img src={name} alt="icon" /> <input type="text" placeholder="Name" name='name' value={formData.name} onChange={handleTaskChange} autoComplete='off' /></div>
+      <div className={styles.input_box}> <img src={name} alt="icon" /> <input type="text" placeholder={userName} name='name' value={formData.name} onChange={handleTaskChange} autoComplete='off' /></div>
       
 
-        <div className={styles.input_box}> <img src={icon} alt="icon" /> <input type="email" placeholder="Update Email" name='email' value={formData.email} onChange={handleTaskChange}  /></div>
+        <div className={styles.input_box}> <img src={icon} alt="icon" /> <input type="email" placeholder={userEmail} name='email' value={formData.email} onChange={handleTaskChange}  /></div>
 
 
         <div className={styles.input_box}> <img src={lock} alt="lock" /> <input type="password" placeholder="Old Password"  name='password' value={formData.password} onChange={handleTaskChange} autoComplete='off' /> <img src={view} alt='view' /></div>

@@ -98,9 +98,8 @@
     overflow-y: scroll;
 
      */
-     flex: 0 0 360px; /* Each mini component has a fixed width of 300px */
+     flex: 0 0 360px; 
      background: #EEF2F5;
-    border-radius: 10px;
      color: white;
      display: block;
      justify-content: center;
