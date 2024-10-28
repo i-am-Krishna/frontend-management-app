@@ -1,7 +1,3 @@
-/* <div className={styles.dashboardContainer}>
-<div className={styles.nameAndDate}></div>
-<div className={styles.filterBox}></div>
-<div className={styles.mainComponent}> */
 
 .dashboardContainer {
     width: calc(100vw - 244px);

@@ -28,6 +28,7 @@ const AddModal = ({ isOpen, closeModal, children, getTasks }) => {
     setChecklist([...checklist, { task: "", done: false }]);
   };
 
+
   
   const handleButtonClick = (priority) => {
     if (priority === selectedPriority){
@@ -98,6 +99,7 @@ const handleSubmit = async () => {
   }
 };
 
+console.log(isOpen)
 
   if (!isOpen) return null;
 

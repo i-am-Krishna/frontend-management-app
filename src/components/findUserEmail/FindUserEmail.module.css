@@ -1,7 +1,6 @@
 
 .customDropdown {
     position: relative;
-    /* border: 1px solid #767575; */
     width: 100%;
     margin-bottom: 16px;
 }
@@ -11,16 +10,12 @@
   width: 100%;
   padding: 12px;
   background: #FFFFFF;
-  border: 1px solid #767575;
   font-size: 16px;
   outline: none;
 padding: 10px 16px 10px 16px;
 gap: 8px;
 border-radius: 4px 0px 0px 0px;
-border: 1px 0px 0px 0px;
-opacity: 0px;
-border: 1px solid #E2E2E2
-
+border: 1px solid #E2E2E2;
 }
 
 .dropdownList {
@@ -55,7 +50,6 @@ border: 1px solid #E2E2E2
     width: 41px;
     height: 41px;
     gap: 0px;
-    opacity: 0px;
     background: #FFEBEB;
     border-radius: 50%;
     font-family: 'DM', Sans;
@@ -88,7 +82,6 @@ padding: 5px 10px 5px 10px;
 gap: 8px;
 border-radius: 8px;
 border: 1px 0px 0px 0px;
-opacity: 0px;
 font-size: 14px;
 font-weight: 500;
 line-height: 21px;
