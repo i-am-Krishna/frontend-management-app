@@ -1,0 +1,149 @@
+.navbar{
+    width: 224px;
+    height: 100vh;
+    border: 1px solid #edf5fe;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: left;
+    align-content: center;
+
+}
+
+.upper{
+    height: 280px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+
+
+
+.heading>span{
+    height: 24px;
+    width: 24px;
+    position: absolute;
+    top: 32px;
+    left: 43px;
+}
+.heading>p{
+    width: 99px;
+    height: 24px;
+    position: relative;
+    top: 32px;
+    left: 83px;
+    font-family: 'Poppins';
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 700;
+    color: #000000;
+}
+
+
+ .subNav{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+    cursor: pointer;
+    margin: 5px 0px;
+    text-decoration: none;
+    
+} 
+.subNav:hover{
+    background: #4391ED1A;
+}
+
+.subNav>span{
+    height: 24px;
+    width: 40%;
+    text-align: right;
+}
+.subNav>span>img:hover{
+color: #000;
+}
+.subNav>p{
+    width: 60%;
+    padding: 5px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    color: #707070;
+}
+
+.subNav>p:hover{
+    color: #000000;
+}
+
+.logout{
+    display: flex;
+    flex-direction: row; 
+    justify-content: center;
+    gap: 16px;
+    align-items: center;
+    align-content: center;
+    width: 100%;
+    color: #CF3636;
+    position: relative;
+    bottom: 80px;
+    cursor: pointer; 
+}
+.logout>p{
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+}
+
+.modalContainer{
+    width: 335.19px;
+    height: 220px;
+    /* padding: 10px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 20px;
+}
+
+.modalContent{
+    /* height: 10px; */
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 19.07px;
+    text-align: center;
+    color: #000000;
+}
+
+.modalLogout, .modalCancel{
+    width: 300px;
+    border-radius: 12px;
+    padding: 15px 4px;
+    gap: 10px;
+    color: white;
+    text-align: center;
+    align-items: center;
+    background-color: #17A2B8;
+    box-shadow: 0px 2px 12px 0px #82698C33;
+    outline: none;
+    cursor: pointer;
+}
+.modalLogout{
+    margin-top: 30px;
+}
+.modalCancel{
+    background: white;
+    border: 1px solid #CF3636;
+    color: #CF3636;
+    margin-bottom: 30px;
+}
+
+.active {
+    background: #4391ED1A; 
+  }
+  

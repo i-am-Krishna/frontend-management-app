@@ -1,0 +1,158 @@
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    width: 100%;
+}
+
+.heading > span {
+    height: 24px;
+    width: 24px;
+    position: absolute;
+    top: 32px;
+    left: 43px;
+}
+
+.heading > p {
+    width: 99px;
+    height: 24px;
+    position: relative;
+    top: 32px;
+    left: 83px;
+    font-family: 'Poppins';
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 700;
+    color: #000000;
+}
+
+.container {
+    max-height: 650px; /* Reduced height for overflow */
+    width: 654px;
+    display: flex;  
+    flex-direction: column;
+    align-items: left;
+    justify-content: flex-start; /* Adjusted alignment */
+    border: 2px solid #edf5fe;
+    border-radius: 12px;
+    padding: 62px 33px;
+    gap: 50px;
+    position: relative; /* If needed, use position for layout */
+}
+
+.hero_section {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+    gap: 22px;
+}
+
+.priority {
+    font-family: 'Poppins'; 
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: flex-start;
+    gap: 5px;
+}
+
+.priority > p {
+    font-size: 9px;
+    font-weight: 500;
+    color: #707070;
+}
+
+
+.title {
+    font-size: 22px;
+    font-weight: 700;
+    color: #000;
+}
+
+.checklist {
+    width: 100%;
+}
+
+.checklist > p {
+    font-size: 14px;
+    font-weight: 500;
+    color: #000000;
+}
+
+.overflows {
+    max-height: 300px; /* Set a fixed height to trigger overflow */
+    overflow-y: scroll;
+    overflow-x: hidden;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.overflows::-webkit-scrollbar {
+    width: 5px;
+}
+
+.overflows::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+}
+
+.overflows::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+}
+
+
+.checkbox{
+    border-radius: 50%;
+    /* border: 2px solid #17A2B8; */
+    width: 18px;
+    height: 18px;
+    outline: none;
+    color: #17A2B8;
+    margin-right: 15px;
+}
+
+.task {
+    display: flex;
+    align-items: center;
+    height: 43px;
+    border-radius: 12px;
+    border: 1px solid #E2E2E2;
+    padding-left: 15px;
+    margin-bottom: 10px;
+}
+
+.dueDate {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.date {
+    background: #CF3636;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 8px;
+}
+
+
+
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        padding: 30px 20px;
+        gap: 30px;
+    }
+
+    .title {
+        font-size: 18px;
+    }
+
+    .task {
+        height: 35px;
+    }
+}
+
+

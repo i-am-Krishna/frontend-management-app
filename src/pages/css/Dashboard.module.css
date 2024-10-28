@@ -1,0 +1,174 @@
+/* <div className={styles.dashboardContainer}>
+<div className={styles.nameAndDate}></div>
+<div className={styles.filterBox}></div>
+<div className={styles.mainComponent}> */
+
+.dashboardContainer {
+    width: calc(100vw - 244px);
+    height: 100%;
+    padding-left: 20px;
+}
+
+.nameAndDate {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 30px 30px 10px;
+}
+
+.nameAndDate > div:nth-child(1) {
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 33px;
+    color: #000;
+}
+
+.nameAndDate > div:nth-child(2) {  
+    font-size: 20px;
+    font-weight: 500;   
+    line-height: 30px;
+    color: #707070;    
+}
+
+.filterBox {    
+    display: flex; 
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px 30px 10px;
+ }
+
+.filterBox> div:nth-child(1) {
+        font-size: 29px;
+        font-weight: 500;
+        line-height: 43.5px;
+        color: #000;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+}
+
+.select {  
+        border: none;
+        outline: none;
+        color: #000;
+        size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        text-align: center;
+        cursor: pointer;
+}
+
+.usergroupSpan{
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 500;
+    color: #707070;
+    cursor: pointer;
+}
+
+.usergroup{
+    width: 15.98px;
+    height: 12.67px;
+}
+
+
+
+
+
+.mainComponent{
+    width: 100%;
+    display: flex;
+    height: 75vh;
+    gap: 20px;
+    overflow-x: auto;
+    scrollbar-width:thin; 
+    scrollbar-color: #e4e3e3 transparent; 
+    padding: 0 10px;
+    padding-right: 40px;
+   
+}
+
+
+.firstComponent{
+    
+    /* background: #EEF2F5;
+    border-radius: 10px;
+    width: 360px;
+    overflow-x: auto;
+    overflow-y: scroll;
+
+     */
+     flex: 0 0 360px; /* Each mini component has a fixed width of 300px */
+     background: #EEF2F5;
+    border-radius: 10px;
+     color: white;
+     display: block;
+     justify-content: center;
+     align-items: center;
+     border-radius: 10px;
+     font-size: 18px;
+}
+
+
+/* .mainComponent::-webkit-scrollbar {
+    /* width: 10px; */
+
+
+.mainComponent::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+    border: none;
+}
+
+.mainComponent::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+}
+
+
+.componentHeading{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    color: #000;
+    border-radius: 5px;
+}
+
+.componentName{
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 600;
+    color: #000;
+}
+
+img{
+    cursor: pointer;
+}
+
+.componentData{
+    margin: 20px;
+    height: 500px;
+    overflow-y: scroll;
+    scrollbar-width:thin; 
+    /* scrollbar-color: #888 #f1f1f1; */
+    scrollbar-color: #e4e3e3 transparent; /* Custom scrollbar color for Firefox */
+
+     /* Firefox */
+}
+
+.componentData::-webkit-scrollbar {
+    width: 5px;
+}   
+
+.componentData::-webkit-scrollbar-thumb {
+    background-color: rgba(170, 166, 166, 0.2);
+    border-radius: 40px;
+}
+
+.componentData::-webkit-scrollbar-track {
+    background-color: transparent;
+}

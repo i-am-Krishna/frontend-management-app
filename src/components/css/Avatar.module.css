@@ -1,0 +1,17 @@
+.avatarcircle {
+    width: 41px;
+    height: 41px;
+    background-color: #ffebeb;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .avatartext {
+    color: black;
+    font-size: 19px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+}
+  

@@ -1,0 +1,297 @@
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    justify-content: flex-start; 
+    border: 2px solid #edf5fe;
+    border-radius: 20px;
+    background: white;
+    padding: 20px 20px 0px 20px;
+    width: 312px;
+    gap: 20px; 
+    position: relative;
+    overflow: hidden; 
+    margin-bottom: 10px;
+}
+    .heading > span {
+        height: 24px;
+        width: 24px;
+        position: absolute;
+        top: 32px;
+        left: 43px;
+    }
+    
+    .heading > p {
+        width: 99px;
+        height: 24px;
+        position: relative;
+        font-family: 'Poppins';
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 700;
+        color: #000000;
+    }
+
+
+.hero_section {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+    gap: 22px;
+}
+
+.priority {
+    width: 270px;
+    font-family: 'Poppins'; 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    justify-content: space-between;
+}
+
+.priority>div > p {
+    font-weight: 600;
+    font-size: 8px;
+    line-height: 12px;
+    color: #707070;
+}
+
+.priority>img {
+    display: flex;  
+    align-items: center;
+}
+
+.high {
+    display: flex;
+    width: 100px;
+    justify-content: left;
+    align-items: center;
+    gap: 5px;
+}
+.priority_text{
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 12px;
+    color: #707070;
+}
+.high>img{
+    border-radius: 50px;
+}
+
+.title {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 27px;
+    color: #000;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+      
+}
+
+.checklist > p {
+    font-size: 14px;
+    font-weight: 500;
+    color: #000000;
+}
+
+.taskCount{
+    display:flex ;
+    width: 270px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.overflows {
+    max-height: 200px; 
+    overflow-y: scroll;
+    overflow-x: hidden;
+    gap: 10px;
+    margin-top: 10px;
+    scrollbar-width:thin; 
+    scrollbar-color: #e4e3e3 transparent; 
+}
+
+.overflows::-webkit-scrollbar {
+    width: 5px;
+}
+
+.overflows::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+}
+
+.overflows::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+}
+
+
+.checkbox{
+    border-radius: 50%;
+    border: 2px solid #17A2B8;
+    width: 18px;
+    height: 18px;
+    outline: none;
+    margin-right: 15px;
+}
+
+.task {
+    display: flex;
+    align-items: center;
+    height: 42px;
+    width: 264px;
+    border-radius: 12px;
+    border: 1px solid #E2E2E2;
+    padding-left: 5px;
+    margin-bottom: 10px;
+    color:#000;
+    font-size: 14px;
+}
+
+.dueDate {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    height: 22px;
+    margin-bottom: 25px;
+    width: 100%;
+}
+
+.date {
+    background: #CF3636;
+    color: white;
+    padding: 5px 8px;
+    border-radius: 8px;
+    font-size: 8px;
+    line-height: 12px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+
+.statusbuttons {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .statusbtn {
+    padding: 5px 8px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    background: #EEECEC;
+    cursor: pointer;
+    font-size: 8px;
+    font-weight: 500;
+    color: #767575;
+  }
+  .statusbtn:hover {
+    background: #e0dcdc;
+  }
+  
+   .dotsToggle {
+    position: relative;
+    padding: 5px;
+  } 
+  
+  
+  .dropdownMenu {
+    position: absolute;
+    right: 10px;
+    top: 30px; 
+    background-color: white;
+    border-radius: 12px;
+    z-index: 10;
+    height: 120px;
+    width: 151px; 
+    box-shadow: 0px 2px 22px 0px #7E7A7A40;
+
+  }
+  
+  .dropdownMenu ul {
+    list-style: none;
+    padding: 8px;
+    margin: 0;
+  }
+  
+  .dropdownMenu li {
+    padding: 8px 12px;
+    cursor: pointer;
+    color: black;
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 600;
+  }
+  
+  .dropdownMenu li:last-child{
+    color: #cf3636;
+  }
+
+  .dropdownMenu li:hover {
+    background-color: #f0f0f0;
+  }
+  
+
+  .toast {
+    position: fixed;
+    top: 20px; 
+    right: 20px; 
+    background: #F6FFF9;
+    border: 1px solid #48c1b5;
+    color: black;
+    padding: 20px 55px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 16px 0px #100B2714;
+    z-index: 1000; 
+    font-size: 14px;
+  }
+
+
+  
+.modalContainer{
+    width: 335.19px;
+    height: 220px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 20px;
+}
+
+.modalContent{
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 19.07px;
+    text-align: center;
+    color: #000000;
+    margin-top: 20px;
+}
+
+.modalLogout, .modalCancel{
+    width: 300px;
+    border-radius: 12px;
+    padding: 10px 4px;
+    gap: 10px;
+    color: white;
+    text-align: center;
+    align-items: center;
+    background-color: #17A2B8;
+    box-shadow: 0px 2px 12px 0px #82698C33;
+    outline: none;
+    cursor: pointer;
+}
+.modalLogout{
+    margin-top: 30px;
+}
+.modalCancel{
+    background: white;
+    border: 1px solid #CF3636;
+    color: #CF3636;
+    margin-bottom: 30px;
+}
