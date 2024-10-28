@@ -43,9 +43,7 @@ const Settings = () => {
     <div className={styles.setting}>
       <div className={styles.headings}>Settings</div>
       <div className={styles.form}>
-        <form >
-      
-      <div className={styles.inputs}>
+        <form className={styles.inputs}>
       <div className={styles.input_box}> <img src={name} alt="icon" /> <input type="text" placeholder="Name" name='name' value={formData.name} onChange={handleTaskChange} autoComplete='off' /></div>
       
 
@@ -59,7 +57,6 @@ const Settings = () => {
 
         <div className={styles.buttons}>
       <button onClick={handleSubmit} >Update</button>
-      </div>
       </div>
       </form> 
       </div>

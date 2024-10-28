@@ -27,7 +27,8 @@ const Login = () => {
   }
 
 
-  const handleLogin=async()=>{
+  const handleLogin=async(e)=>{
+    e.preventDefault();
     try {
       await loginSchema.validate(formData, { abortEarly: false });
       const response = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/api/v1/user/login`, {
@@ -54,7 +55,7 @@ const Login = () => {
   return (
     <div className={styles.container}>
       <div className={styles.sidebar}><LoginSignupSideBar/></div>
-    <div className={styles.loginSec}>
+    <form className={styles.loginSec}>
       <div className={styles.heading}><p className={styles.para}>Login</p></div>
       <div className={styles.inputs}>
         <div className={styles.input_box}> <img src={icon} alt="icon" /> <input type="text" placeholder="Email" name='email' value={formData.email} onChange={handleTaskChange}  /></div>
@@ -71,7 +72,7 @@ const Login = () => {
       <Link to={'/signup'} style={{ textDecoration: 'none',width:'100%' }}><button className={styles.registerLogin}>Register</button></Link>
 
       </div>
-    </div>
+    </form>
     </div>
   )
 }

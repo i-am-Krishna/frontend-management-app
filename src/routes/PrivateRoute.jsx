@@ -17,7 +17,6 @@ const PrivateRoute = () => {
 
     checkAuth()
   }, [])
-  console.log(auth)
   if (loading) {
     return <Loading/>;
   }

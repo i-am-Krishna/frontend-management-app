@@ -27,7 +27,8 @@ const Signup = () => {
       [name]:value
     })
   }
-const handleSubmit=async()=>{
+const handleSubmit=async(e)=>{
+  e.preventDefault();
   try {
 
     await signUpSchema.validate(formData, { abortEarly: false });
@@ -57,7 +58,7 @@ const handleSubmit=async()=>{
   return (
     <div className={styles.container}>
       <div className={styles.sidebar}><LoginSignupSideBar/></div>
-    <div className={styles.loginSec}>
+    <form className={styles.loginSec}>
       <div className={styles.heading}><p className={styles.para}>Register</p></div>
       <div className={styles.inputs}>
       <div className={styles.input_box}> <img src={name} alt="icon" /> 
@@ -83,7 +84,7 @@ const handleSubmit=async()=>{
       <button className={styles.login}>Login</button></Link>
 
       </div>
-    </div></div>
+    </form></div>
   )
 }
 

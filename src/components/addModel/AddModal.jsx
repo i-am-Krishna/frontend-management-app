@@ -99,8 +99,6 @@ const handleSubmit = async () => {
   }
 };
 
-console.log(isOpen)
-
   if (!isOpen) return null;
 
   return (
