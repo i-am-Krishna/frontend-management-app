@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import logo from '../assets/logo.png';
-import styles from './css/SharedTask.module.css';
+import logo from '../../assets/logo.png';
+import styles from './SharedTask.module.css';
 import axios from 'axios';
-import Circle from '../components/Circle';
+import Circle from '../../components/circle/Circle';
 import { useParams } from 'react-router-dom';
 
 const SharedTask = () => {

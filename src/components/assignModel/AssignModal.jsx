@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import styles from './css/AssignModal.module.css';
-import SuccessModal from './SuccessModal';
+import styles from './AssignModal.module.css';
+import SuccessModal from '../success/SuccessModal';
 import axios from 'axios';
 
 const AssignModal = ({ isOpen, onClose , allUsers}) => {

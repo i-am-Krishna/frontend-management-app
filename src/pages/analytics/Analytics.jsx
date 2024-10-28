@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
-import styles from './css/Analytics.module.css'
-import Circle from '../components/Circle';
+import styles from './Analytics.module.css'
+import Circle from '../../components/circle/Circle';
 import axios from 'axios';
 
 const Analytics = () => {

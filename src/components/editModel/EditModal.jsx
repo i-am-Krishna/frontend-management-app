@@ -1,10 +1,10 @@
 
 import React, { useState } from "react";
-import styles from "./css/EditModal.module.css"; 
-import Important from "./Important";
-import Delete from "../assets/Delete.png";
-import Circle from "./Circle";
-import FindUserEmail from "./FindUserEmail";
+import styles from "./EditModal.module.css"; 
+import Important from "../important/Important";
+import Delete from "../../assets/Delete.png";
+import Circle from "../circle/Circle";
+import FindUserEmail from "../findUserEmail/FindUserEmail";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css"; 
 import { toast } from "react-toastify";

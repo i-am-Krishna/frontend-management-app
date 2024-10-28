@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import styles from './css/Hero.module.css';
-import dots from '../assets/dots.png';
-import up from '../assets/up.png';
-import down from '../assets/down.png';
-import Modal from './Modal';
-import Circle from './Circle';
-import EditModal from './EditModal';
+import styles from './Hero.module.css';
+import dots from '../../assets/dots.png';
+import up from '../../assets/up.png';
+import down from '../../assets/down.png';
+import Modal from '../modal/Modal';
+import Circle from '../circle/Circle';
+import EditModal from '../editModel/EditModal';
 import axios from 'axios';
 
 const Hero = ({buttons, onButtonClick, task , getTasks}) => {

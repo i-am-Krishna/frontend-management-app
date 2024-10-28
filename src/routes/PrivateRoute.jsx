@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react'
 import { Navigate, Outlet } from 'react-router-dom'
 import { isAuthenticated } from '../utils/auth'
-import Loading from '../components/Loading'
+import Loading from '../components/loading/Loading'
 
 const PrivateRoute = () => {
   const [auth, setAuth] = useState(false)

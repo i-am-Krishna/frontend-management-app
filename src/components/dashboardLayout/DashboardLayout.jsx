@@ -1,7 +1,7 @@
 import React from 'react'
 import { Outlet } from 'react-router-dom'
-import Navbar from './Navbar'
-import styles from './css/DashboardLayout.module.css'
+import Navbar from '../navbar/Navbar'
+import styles from './DashboardLayout.module.css'
 
 const DashboardLayout = () => {
   return (

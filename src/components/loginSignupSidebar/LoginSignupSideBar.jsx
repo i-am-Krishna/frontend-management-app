@@ -1,6 +1,6 @@
 import React from 'react'
-import styles from './css/LoginSignupSideBar.module.css'
-import robo from '../assets/robo.png'
+import styles from './LoginSignupSideBar.module.css'
+import robo from '../../assets/robo.png'
 
 const LoginSignupSideBar = () => {
 

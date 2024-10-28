@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import styles from './css/FindUserEmail.module.css'
+import styles from './FindUserEmail.module.css'
 import axios from 'axios';
 const FindUserEmail = ({message, setFindUser}) => {
     const [allUsers, setAllUsers] = useState([]);

@@ -1,11 +1,11 @@
 
 
 import React, { useState } from "react";
-import styles from "./css/AddModal.module.css"; // Modal-specific CSS
-import Important from "./Important";
-import Delete from "../assets/Delete.png";
-import Circle from "./Circle";
-import FindUserEmail from "./FindUserEmail";
+import styles from "./AddModal.module.css"; // Modal-specific CSS
+import Important from "../important/Important";
+import Delete from "../../assets/Delete.png";
+import Circle from "../circle/Circle";
+import FindUserEmail from "../findUserEmail/FindUserEmail";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css"; 
 import axios from "axios";

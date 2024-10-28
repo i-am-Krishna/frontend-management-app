@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './css/SuccessModal.module.css'; 
+import styles from './SuccessModal.module.css'; 
 
 const SuccessModal = ({ email, closeModal }) => {
    

@@ -1,14 +1,14 @@
 
 import axios from 'axios';
 import React, { useState } from 'react';
-import styles from './css/Navbar.module.css';
-import logo from '../assets/logo.png';
-import Logout from '../assets/Logout.png';
-import setting from '../assets/settings.png';
-import layout from '../assets/layout.png';
-import database from '../assets/database.png';
+import styles from './Navbar.module.css';
+import logo from '../../assets/logo.png';
+import Logout from '../../assets/Logout.png';
+import setting from '../../assets/settings.png';
+import layout from '../../assets/layout.png';
+import database from '../../assets/database.png';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
-import Modal from './Modal';
+import Modal from '../modal/Modal';
 import { toast } from 'react-toastify';
 
 const Navbar = () => {

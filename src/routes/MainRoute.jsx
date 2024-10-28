@@ -1,15 +1,15 @@
 import React from 'react'
 import { Route, Routes } from 'react-router-dom'
-import Dashboard from '../pages/Dashboard'
+import Dashboard from '../pages/dashboard/Dashboard'
 
-import Login from '../pages/Login'
-import Signup from '../pages/Signup'
-import DashboardLayout from '../components/DashboardLayout'
-import Analytics from '../pages/Analytics'
-import SharedTask from '../pages/SharedTask'
+import Login from '../pages/login/Login'
+import Signup from '../pages/signup/Signup'
+import DashboardLayout from '../components/dashboardLayout/DashboardLayout'
+import Analytics from '../pages/analytics/Analytics'
+import SharedTask from '../pages/sharedTask/SharedTask'
 import PrivateRoute from './PrivateRoute'
-import Settings from '../pages/Settings'
-import PageNotFound from '../pages/PageNotFound'
+import Settings from '../pages/settings/Settings'
+import PageNotFound from '../pages/pageNotFound/PageNotFound'
 
 
 const MainRoutes = () => {

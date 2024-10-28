@@ -1,5 +1,5 @@
 import React from 'react';
-import './css/Avatar.module.css'; 
+import './Avatar.module.css'; 
 const Avatar = ({ email }) => {
  
   const getInitials = (email) => {
