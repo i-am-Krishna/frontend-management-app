@@ -6,7 +6,7 @@ export const isAuthenticated = async () => {
       if (response) {
         return true 
       }
-      return true 
+      return false
     } catch (error) {
       return false
     }
