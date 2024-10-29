@@ -214,13 +214,13 @@
 
   }
   
-  .dropdownMenu ul {
+  .dropdownMenu > ul {
     list-style: none;
     padding: 8px;
     margin: 0;
   }
   
-  .dropdownMenu li {
+  .dropdownMenu > ul > li {
     padding: 8px 12px;
     cursor: pointer;
     color: black;
@@ -229,11 +229,11 @@
     font-weight: 600;
   }
   
-  .dropdownMenu li:last-child{
+  .deleteButton{
     color: #cf3636;
   }
 
-  .dropdownMenu li:hover {
+  .dropdownMenu > ul > li:hover {
     background-color: #f0f0f0;
   }
   

@@ -95,7 +95,7 @@ const Hero = ({buttons, onButtonClick, task , getTasks}) => {
           <ul>
             <li onClick={openEditModal}>Edit</li>
             <li onClick={()=>handleShare(task._id)}>Share</li>
-            <li onClick={openModal}>Delete</li>
+            <li className={styles.deleteButton} onClick={openModal}>Delete</li>
           </ul>
         </div>
       )}

@@ -10,14 +10,14 @@ import { toast } from 'react-toastify'
 
 const Settings = () => {
   const navigate = useNavigate()
+  const userEmail = localStorage.getItem('userEmail');
+  const userName = localStorage.getItem('userName');
   const [formData,setFormData] = useState({
-    name:'',
-    email:'',
+    name:userName,
+    email:userEmail,
     password:'',
     new_password:''
   })
-  const userEmail = localStorage.getItem('userEmail');
-  const userName = localStorage.getItem('userName');
 
   const handleTaskChange = (e) => {
     const {name,value} = e.target
@@ -50,16 +50,16 @@ const Settings = () => {
       <div className={styles.headings}>Settings</div>
       <div className={styles.form}>
         <form className={styles.inputs}>
-      <div className={styles.input_box}> <img src={name} alt="icon" /> <input type="text" placeholder={userName} name='name' value={formData.name} onChange={handleTaskChange}  /></div>
+      <div className={styles.input_box}> <img src={name} alt="icon" /> <input type="text" placeholder='Name' name='name' value={formData.name} onChange={handleTaskChange} autoComplete="off" /></div>
       
 
-        <div className={styles.input_box}> <img src={icon} alt="icon" /> <input type="email" placeholder={userEmail} name='email' value={formData.email} onChange={handleTaskChange}  /></div>
+        <div className={styles.input_box}> <img src={icon} alt="icon" /> <input type="email" placeholder='Email' name='email' value={formData.email} onChange={handleTaskChange} autoComplete="email" /></div>
 
 
-        <div className={styles.input_box}> <img src={lock} alt="lock" /> <input type="password" placeholder="Old Password"  name='password' value={formData.password} onChange={handleTaskChange}  /> <img src={view} alt='view' /></div>
+        <div className={styles.input_box}> <img src={lock} alt="lock" /> <input type="password" placeholder="Old Password"  name='password' value={formData.password} onChange={handleTaskChange} autoComplete="new-password" /> <img src={view} alt='view' /></div>
 
 
-        <div className={styles.input_box}> <img src={lock} alt="lock" /> <input type="password" placeholder="New Password" name='new_password' value={formData.new_password} onChange={handleTaskChange} /> <img src={view} alt='view' /> </div>
+        <div className={styles.input_box}> <img src={lock} alt="lock" /> <input type="password" placeholder="New Password" name='new_password' value={formData.new_password} onChange={handleTaskChange} autoComplete="new-password" /> <img src={view} alt='view' /> </div>
 
         <div className={styles.buttons}>
       <button onClick={handleSubmit} >Update</button>

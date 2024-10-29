@@ -59,10 +59,10 @@ const Login = () => {
     <form className={styles.loginSec}>
       <div className={styles.heading}><p className={styles.para}>Login</p></div>
       <div className={styles.inputs}>
-        <div className={styles.input_box}> <img src={icon} alt="icon" /> <input type="text" placeholder="Email" name='email' value={formData.email} onChange={handleTaskChange}  /></div>
+        <div className={styles.input_box}> <img src={icon} alt="icon" /> <input type="text" placeholder="Email" name='email' value={formData.email} onChange={handleTaskChange} autoComplete="off" /></div>
         {errors.email && <p style={{ color: 'red', marginTop:'-20px', marginBottom:'5px',fontSize:'12px' }}>{errors.email}</p>}
 
-        <div className={styles.input_box}> <img src={lock} alt="lock" /> <input type="password" placeholder="Password" name='password' value={formData.password} onChange={handleTaskChange}/> <img src={view} alt='view' />
+        <div className={styles.input_box}> <img src={lock} alt="lock" /> <input type="password" placeholder="Password" name='password' value={formData.password} onChange={handleTaskChange} autoComplete="new-password"/> <img src={view} alt='view' />
          </div>
          {errors.password && <p style={{marginTop:'-20px', marginBottom:'5px', color: 'red',fontSize:'12px'  }}>{errors.password}</p>}
 

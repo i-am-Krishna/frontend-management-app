@@ -60,7 +60,7 @@
 
 .input_box > input{
     width: 100%;
-    font-family: 'Open Sans';
+    font-family: 'Open Sans' sans-serif;
     font-weight: 400;
     font-size: 19.29px;
     line-height: 26.28px;

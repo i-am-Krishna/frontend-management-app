@@ -85,11 +85,11 @@ const getTasks = useCallback( async () => {
   return (
     <div className={styles.dashboardContainer}>
       <div className={styles.nameAndDate}>
-        <div>Welcome! {userName}</div>
-        <div>{date()}</div>
+        <div className={styles.nameWelcome}>Welcome! {userName}</div>
+        <div className={styles.date}>{date()}</div>
       </div>
       <div className={styles.filterBox}>
-        <div>Board <span onClick={openModal} className={styles.usergroupSpan}><img className={styles.usergroup} src={usergroup} alt="usergroup" /> Add People</span></div>
+        <div className={styles.userBoard}>Board <span onClick={openModal} className={styles.usergroupSpan}><img className={styles.usergroup} src={usergroup} alt="usergroup" /> Add People</span></div>
         <AssignModal isOpen={isAssignModalOpen} onClose={closeModal} allUsers={allUsers} />
 
         <div> <select className={styles.select} id="time-range"  value={selectedTimeRange} 

@@ -103,7 +103,6 @@ color: #000;
 .modalContainer{
     width: 335.19px;
     height: 220px;
-    /* padding: 10px; */
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -112,7 +111,6 @@ color: #000;
 }
 
 .modalContent{
-    /* height: 10px; */
     font-size: 14px;
     font-weight: 600;
     line-height: 19.07px;

@@ -49,7 +49,7 @@ function getInitials(str) {
     return (
       <div className={styles.modaloverlay} onClick={onClose}>
         <div className={styles.modalcontent} onClick={e => e.stopPropagation()}>
-          <h2>Add people to the board</h2>
+          <h2 className={styles.modaltitle}>Add people to the board</h2>
           {isModalOpen && <SuccessModal  email={email} closeModal={closeModal} />}
 
 <div className={styles.customDropdown}>

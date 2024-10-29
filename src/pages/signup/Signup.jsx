@@ -62,18 +62,18 @@ const handleSubmit=async(e)=>{
       <div className={styles.heading}><p className={styles.para}>Register</p></div>
       <div className={styles.inputs}>
       <div className={styles.input_box}> <img src={name} alt="icon" /> 
-      <input type="text" placeholder="Name" name='name' value={formData.name} onChange={handleTaskChange}   />
+      <input type="text" placeholder="Name" name='name' value={formData.name} onChange={handleTaskChange}  autoComplete="off" />
       </div>
       {errors.name && <p style={{ color: 'red', marginTop:'-20px', marginBottom:'5px',fontSize:'12px' }}>{errors.name}</p>}
-        <div className={styles.input_box}> <img src={icon} alt="icon" /> <input type="email" placeholder="Email" name='email' value={formData.email} onChange={handleTaskChange}   />
+        <div className={styles.input_box}> <img src={icon} alt="icon" /> <input type="email" placeholder="Email" name='email' value={formData.email} onChange={handleTaskChange}  autoComplete="off" />
         </div>
         {errors.email && <p style={{ color: 'red', marginTop:'-20px', marginBottom:'5px',fontSize:'12px' }}>{errors.email}</p>}
 
-        <div className={styles.input_box}> <img src={lock} alt="lock" /> <input type="password" placeholder="Password" name='password' value={formData.password} onChange={handleTaskChange} /> <img src={view} alt='view' /> 
+        <div className={styles.input_box}> <img src={lock} alt="lock" /> <input type="password" placeholder="Password" name='password' value={formData.password} onChange={handleTaskChange} /> <img src={view} alt='view' autoComplete="new-password" /> 
         </div>
         {errors.password && <p style={{marginTop:'-20px', marginBottom:'5px', color: 'red',fontSize:'12px'  }}>{errors.password}</p>}
 
-        <div className={styles.input_box}> <img src={lock} alt="lock" /> <input type="password" placeholder="Confirm Password" name='confirmPassword' value={formData.confirmPassword} onChange={handleTaskChange} /> <img src={view} alt='view' />   
+        <div className={styles.input_box}> <img src={lock} alt="lock" /> <input type="password" placeholder="Confirm Password" name='confirmPassword' value={formData.confirmPassword} onChange={handleTaskChange} autoComplete="new-password" /> <img src={view} alt='view' />   
       </div>
         {errors.confirmPassword && <p style={{ color: 'red', marginTop:'-20px', marginBottom:'5px' ,fontSize:'12px' }}>{errors.confirmPassword}</p>}
         </div>

@@ -13,14 +13,14 @@
     padding: 30px 30px 30px 10px;
 }
 
-.nameAndDate > div:nth-child(1) {
+.nameWelcome {
     font-size: 22px;
     font-weight: 600;
     line-height: 33px;
     color: #000;
 }
 
-.nameAndDate > div:nth-child(2) {  
+.date {  
     font-size: 20px;
     font-weight: 500;   
     line-height: 30px;
@@ -35,7 +35,7 @@
     padding: 10px 30px 30px 10px;
  }
 
-.filterBox> div:nth-child(1) {
+ .userBoard {
         font-size: 29px;
         font-weight: 500;
         line-height: 43.5px;

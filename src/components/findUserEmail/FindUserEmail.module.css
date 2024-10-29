@@ -1,8 +1,7 @@
-
 .customDropdown {
-    position: relative;
-    width: 100%;
-    margin-bottom: 16px;
+  position: relative;
+  width: 100%;
+  margin-bottom: 16px;
 }
 
 .dropdownHeader {
@@ -12,10 +11,10 @@
   background: #FFFFFF;
   font-size: 16px;
   outline: none;
-padding: 10px 16px 10px 16px;
-gap: 8px;
-border-radius: 4px 0px 0px 0px;
-border: 1px solid #E2E2E2;
+  padding: 10px 16px 10px 16px;
+  gap: 8px;
+  border-radius: 4px 0px 0px 0px;
+  border: 1px solid #E2E2E2;
 }
 
 .dropdownList {
@@ -34,58 +33,57 @@ border: 1px solid #E2E2E2;
   border-radius: 10px;
 }
 
-  .assignedPlace{
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 2px 20px;
-    align-items: center;
-    gap: 10px;
-    cursor: pointer;
-    border-radius: 10px;
-  }
+.assignedPlace {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 2px 20px;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  border-radius: 10px;
+}
 
-  .avatarPlace{
-    width: 41px;
-    height: 41px;
-    gap: 0px;
-    background: #FFEBEB;
-    border-radius: 50%;
-    font-family: 'DM', Sans;
-    font-size: 19px;
-    font-weight: 400;
-    line-height: 24px;
-    letter-spacing: 0.5px;
-    text-align: center;
-    outline: none;
-    border: none;
-    color: black;
-    padding: 5px;
-    margin: 5px ;
+.avatarPlace {
+  width: 41px;
+  height: 41px;
+  gap: 0px;
+  background: #FFEBEB;
+  border-radius: 50%;
+  font-family: 'DM', Sans;
+  font-size: 19px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  text-align: center;
+  outline: none;
+  border: none;
+  color: black;
+  padding: 5px;
+  margin: 5px;
 
-  }
-  .emailNamePlace{
-    font-family: 'Inter', sans-serif;
-    font-size: 16px;
-    line-height: 24px;
-    letter-spacing: 0.5px;
-    font-weight: 500;
-    /* text-align: left; */
+}
 
-  }
+.emailNamePlace {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  font-weight: 500;
 
-  .assignButton{
-    font-family: 'Poppins', sans-serif;
-    border: 1px solid #E2E2E2;
-padding: 5px 10px 5px 10px;
-gap: 8px;
-border-radius: 8px;
-border: 1px 0px 0px 0px;
-font-size: 14px;
-font-weight: 500;
-line-height: 21px;
-text-align: left;
-    color: #767575;
-  }
- 
+}
+
+.assignButton {
+  font-family: 'Poppins', sans-serif;
+  border: 1px solid #E2E2E2;
+  padding: 5px 10px 5px 10px;
+  gap: 8px;
+  border-radius: 8px;
+  border: 1px 0px 0px 0px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 21px;
+  text-align: left;
+  color: #767575;
+}
