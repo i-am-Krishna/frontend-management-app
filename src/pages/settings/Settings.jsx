@@ -50,16 +50,16 @@ const Settings = () => {
       <div className={styles.headings}>Settings</div>
       <div className={styles.form}>
         <form className={styles.inputs}>
-      <div className={styles.input_box}> <img src={name} alt="icon" /> <input type="text" placeholder={userName} name='name' value={formData.name} onChange={handleTaskChange} autoComplete='off' /></div>
+      <div className={styles.input_box}> <img src={name} alt="icon" /> <input type="text" placeholder={userName} name='name' value={formData.name} onChange={handleTaskChange}  /></div>
       
 
         <div className={styles.input_box}> <img src={icon} alt="icon" /> <input type="email" placeholder={userEmail} name='email' value={formData.email} onChange={handleTaskChange}  /></div>
 
 
-        <div className={styles.input_box}> <img src={lock} alt="lock" /> <input type="password" placeholder="Old Password"  name='password' value={formData.password} onChange={handleTaskChange} autoComplete='off' /> <img src={view} alt='view' /></div>
+        <div className={styles.input_box}> <img src={lock} alt="lock" /> <input type="password" placeholder="Old Password"  name='password' value={formData.password} onChange={handleTaskChange}  /> <img src={view} alt='view' /></div>
 
 
-        <div className={styles.input_box}> <img src={lock} alt="lock" /> <input type="password" placeholder="New Password" name='new_password' value={formData.new_password} onChange={handleTaskChange} autoComplete='off' /> <img src={view} alt='view' /> </div>
+        <div className={styles.input_box}> <img src={lock} alt="lock" /> <input type="password" placeholder="New Password" name='new_password' value={formData.new_password} onChange={handleTaskChange} /> <img src={view} alt='view' /> </div>
 
         <div className={styles.buttons}>
       <button onClick={handleSubmit} >Update</button>
