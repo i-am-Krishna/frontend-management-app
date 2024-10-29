@@ -1,4 +1,4 @@
-
+/* 
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 
@@ -12,4 +12,50 @@
   
   button{
     cursor: pointer;
-  }
+  } */
+
+  /* Import fonts */
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  
+  /* Smoother font rendering across browsers */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Apply consistent button styles */
+button {
+  cursor: pointer;
+
+  /* Reset specific button styles to prevent browser inconsistencies */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  /* Provide consistent border and outline handling */
+  border: none;
+  outline: none;
+  background-color: transparent;
+  
+  /* Cross-browser padding consistency */
+  padding: 0;
+}
+
+/* Optional - Add default font styles to ensure consistency in weight */
+body {
+  font-weight: 400; /* Regular weight */
+  color: #000; /* Default text color */
+  background-color: #fff; /* Default background color */
+}
+
+/* Cross-browser button hover effect, if needed */
+button:hover {
+  /* Slight opacity change for visual feedback */
+  opacity: 0.9;
+  transition: opacity 0.2s ease-in-out;
+}

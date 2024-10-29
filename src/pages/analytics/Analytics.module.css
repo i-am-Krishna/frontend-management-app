@@ -1,6 +1,5 @@
 .container{
     width: calc(100vw - 264px);
-    /* height: 100%; */
 }
 .headings{
     font-size: 22px;

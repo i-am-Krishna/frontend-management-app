@@ -96,8 +96,8 @@
     width: 360px;
     overflow-x: auto;
     overflow-y: scroll;
-
      */
+     height: 100%;
      flex: 0 0 360px; 
      background: #EEF2F5;
      color: white;
@@ -106,22 +106,10 @@
      align-items: center;
      border-radius: 10px;
      font-size: 18px;
+
 }
 
 
-/* .mainComponent::-webkit-scrollbar {
-    /* width: 10px; */
-
-
-.mainComponent::-webkit-scrollbar-thumb {
-    background-color: rgba(0, 0, 0, 0.2);
-    border-radius: 50%;
-    border: none;
-}
-
-.mainComponent::-webkit-scrollbar-track {
-    background-color: #f1f1f1;
-}
 
 
 .componentHeading{
@@ -129,6 +117,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 20px;
+    padding-bottom: 0px;
     color: #000;
     border-radius: 5px;
 }
@@ -146,7 +135,8 @@ img{
 
 .componentData{
     margin: 20px;
-    height: 500px;
+    height: 85%;
+    /* padding-bottom: 30px; */
     overflow-y: scroll;
     scrollbar-width:thin; 
     /* scrollbar-color: #888 #f1f1f1; */

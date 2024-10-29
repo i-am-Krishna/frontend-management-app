@@ -105,7 +105,7 @@ const getTasks = useCallback( async () => {
           <div className={styles.componentHeading}>
           <div className={styles.componentName}>Backlog</div>
           <div className={styles.collapse}><img src={collapse} alt="collapse" /> </div>
-          </div>
+          </div> 
           <div className={styles.componentData}>
             { backlogTasks.length>0 ? 
               backlogTasks.map((task) => (
