@@ -1,3 +1,8 @@
+
+
+# Important Notice: If you do not go to the Home Page after logging in, please allow third-party cookies.
+
+
 # Project Management App
 
 A React-based project management application designed to help users organize and track tasks across different statuses (e.g., Backlog, To Do, In Progress, Done). The app includes features such as task categorization, priority settings, checklists, and collapse/expand options for individual and grouped tasks.
