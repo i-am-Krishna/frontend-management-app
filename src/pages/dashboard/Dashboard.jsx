@@ -1,9 +1,7 @@
 import React, { useCallback, useEffect, useState } from 'react'
 import styles from './Dashboard.module.css'
 import date from '../../utils/getDate'
-// import usergroup from '../assets/usergroup.png'
 import usergroup from '../../assets/usergroup.png'
-
 import collapse from '../../assets/collapse.png'
 import plus from '../../assets/plus.png'
 import Hero from '../../components/hero/Hero'
@@ -13,7 +11,9 @@ import axios from 'axios'
 import { toast } from 'react-toastify'
 
 
+
 const Dashboard = () => {
+
   const [allUsers, setAllUsers] = useState([]);
   const [todoTasks, setTodoTasks] = useState([]);
   const [progressTasks, setProgressTasks] = useState([]);
@@ -81,7 +81,6 @@ const getTasks = useCallback( async () => {
 
 
 
-
   return (
     <div className={styles.dashboardContainer}>
       <div className={styles.nameAndDate}>
@@ -125,7 +124,7 @@ const getTasks = useCallback( async () => {
           <div className={styles.componentData}>
             {todoTasks.length>0 ?
               todoTasks.map((task) => (
-                <Hero className={styles.innerComponent} key={task._id} buttons={['BACKLOG','PROGRESS','DONE']}  onButtonClick={handleButtonClick} task={task} getTasks={getTasks} />
+                <Hero className={styles.innerComponent} key={task._id} buttons={['BACKLOG','PROGRESS','DONE']}  onButtonClick={handleButtonClick} task={task} getTasks={getTasks}  />
             )) : null}
           </div> </div>
 
@@ -149,7 +148,7 @@ const getTasks = useCallback( async () => {
         <div className={styles.firstComponent}> 
         <div className={styles.componentHeading}>
           <div className={styles.componentName}>Done</div>
-          <div className={styles.collapse}><img src={collapse} alt="collapse" /> </div>
+          <div className={styles.collapse}><img src={collapse} alt="collapse"  /> </div>
           </div>
           <div className={styles.componentData}>
 

@@ -7,14 +7,14 @@ import Modal from '../modal/Modal';
 import Circle from '../circle/Circle';
 import EditModal from '../editModel/EditModal';
 import axios from 'axios';
+import { isDateGone } from '../../utils/goneDate';
 
-const Hero = ({buttons, onButtonClick, task , getTasks}) => {
+const Hero = ({ buttons, onButtonClick, task , getTasks }) => {
     const [isChecklistVisible, setChecklistVisible] = useState(false);
     const [isOpen, setIsOpen] = useState(false);
     const [showToast, setShowToast] = useState(false);
     const [isModalOpen, setModalOpen] = useState(false);  
     const [isEditModalOpen, setEditModalOpen] = useState(false);
-
 
     const openModal = () => setModalOpen(true);
     const closeModal = () => setModalOpen(false);
@@ -76,13 +76,15 @@ const Hero = ({buttons, onButtonClick, task , getTasks}) => {
       console.log(error)
     }
   };  
-
+  
   const toggleChecklist = () => {
     setChecklistVisible(!isChecklistVisible);
   };
+    
 
   const doneTasks = task?.checklist.filter(task => task.done).length;
 
+  
   return (
         <div className={styles.container} >
           <div className={styles.hero_section}>
@@ -106,8 +108,8 @@ const Hero = ({buttons, onButtonClick, task , getTasks}) => {
 
           <div className={styles.checklist}>
             <div className={styles.taskCount}><p style={{color: 'black',fontSize: "14px",
-    fontWeight: '500'}}>Checklist ({doneTasks}/{task?.checklist.length})</p> <p><img src={toggleChecklist? up:down} onClick={toggleChecklist} alt='updown'/> </p></div>
-           {isChecklistVisible ? <> <div className={styles.overflows} >
+    fontWeight: '500'}}>Checklist ({doneTasks}/{task?.checklist.length})</p> <p><img src={isChecklistVisible? up:down} onClick={toggleChecklist} alt='updown'/> </p></div>
+           { isChecklistVisible ? <> <div className={styles.overflows} >
               {task?.checklist && task?.checklist.map((subtask) => (
                 <div key={subtask._id} className={styles.task}>
                   <input type="checkbox" className={styles.checkbox} defaultChecked={subtask.done} onChange={(e)=>handCheckboxChange(e,task._id,subtask._id)} /> {subtask?.subtask}
@@ -116,10 +118,12 @@ const Hero = ({buttons, onButtonClick, task , getTasks}) => {
             </div>
             </>:null}
           </div>
+
             <div className={styles.dueDate}>
-          {task.dueDate ? (
-              <span className={styles.date} style={{ backgroundColor: task.status === "Done" ? "#63c05b" : (task.priority === "High Priority" ? "#CF3636" : "#DBDBDB")
-                , color: task.status === "Done" ? "#fff" : (task.priority === "High Priority" ? "#fff" : "#5a5a5a")
+
+          {task?.dueDate ? (
+              <span className={styles.date} style={{ backgroundColor: task.status === "Done" ? "#63c05b" :( isDateGone(task.dueDate) ? "#CF3636" : (task.priority === "High Priority" ? "#CF3636" : "#DBDBDB"))
+                , color: task.status === "Done" ? "#fff" :( isDateGone(task.dueDate) ? "#fff" : (task.priority === "High Priority" ? "#fff" : "#5a5a5a"))
 }}>{task?.dueDate}</span>
             ) :               <span  style={{backgroundColor:"white"}}></span>}
             <div className={styles.statusbuttons}>
