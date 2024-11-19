@@ -80,10 +80,11 @@
   padding: 5px 10px 5px 10px;
   gap: 8px;
   border-radius: 8px;
-  border: 1px 0px 0px 0px;
   font-size: 14px;
   font-weight: 500;
   line-height: 21px;
   text-align: left;
-  color: #767575;
+  color: gray;
+  background: #fff;
+  gap:8px;
 }
