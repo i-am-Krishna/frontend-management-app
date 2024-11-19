@@ -65,10 +65,31 @@
 }
 
 
-.title {
+/* .title {
     font-size: 22px;
     font-weight: 700;
     color: #000;
+} */
+.title {
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 27px;
+    color: #000;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-height: 54px;
+    transition: max-height 0.3s ease-in-out; 
+}
+
+.title:hover {
+    -webkit-line-clamp: unset;
+    line-clamp: unset;
+    max-height: 700px;
+    transition: max-height 0.3s ease-in-out; 
 }
 
 .checklist {
@@ -104,21 +125,15 @@
 
 
 .checkbox{
-    background-color: blue; /* Add blue background */
-    /* opacity: 0.6; Adjust opacity to indicate it's disabled */
+    background-color: rgb(14, 152, 215); 
     border-radius: 50%;
     width: 18px;
     margin-right: 15px;
     height: 18px;
     outline: none;
     color:white;
-    cursor: not-allowed; /* Change cursor to indicate it's not clickable */
-    color: #17A2B8;
+    cursor: not-allowed; 
 } 
-
-/* input[type="checkbox"]:disabled {
-  } */
-  
 
 .task {
     display: flex;
