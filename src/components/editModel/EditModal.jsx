@@ -11,6 +11,7 @@ import { toast } from "react-toastify";
 import axios from "axios";
 
 const EditModal = ({ isOpen, closeModal, task, getTasks }) => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [selectedPriority, setSelectedPriority] = useState(null);
   const [checklist, setChecklist] = useState(task.checklist.map((item) => ({ ...item })) || []);
   const [selectedDate, setSelectedDate] = useState(null);
@@ -59,6 +60,7 @@ const EditModal = ({ isOpen, closeModal, task, getTasks }) => {
   };
 
   const handleSubmit = async () => {
+    if (isSubmitting) return;
     const status = {
       "high": "High Priority",
       "moderate": "Moderate Priority",
@@ -81,7 +83,7 @@ const EditModal = ({ isOpen, closeModal, task, getTasks }) => {
       dueDate: selectedDate ? selectedDate.toISOString() : null,
       priority: status[selectedPriority] || "Low Priority",
     };
-
+    setIsSubmitting(true);
     try { 
       const res = await axios.patch(
         `${process.env.REACT_APP_BACKEND_URL}/api/v1/task/update/${task._id}`, 
@@ -97,6 +99,9 @@ const EditModal = ({ isOpen, closeModal, task, getTasks }) => {
       getTasks();
     } catch (error) {
       console.log(error); 
+    }
+    finally {
+      setIsSubmitting(false);
     }
   };
 

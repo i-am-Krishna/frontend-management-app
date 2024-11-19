@@ -11,8 +11,8 @@ import "react-datepicker/dist/react-datepicker.css";
 import axios from "axios";
 import { toast } from "react-toastify";
 
-
 const AddModal = ({ isOpen, closeModal, children, getTasks }) => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [selectedPriority, setSelectedPriority] = useState(null);
 
   const [checklist, setChecklist] = useState([
@@ -63,6 +63,7 @@ const handleDeleteTask = (index) => {
 
 
 const handleSubmit = async () => {
+  if (isSubmitting) return; 
   const statusMapping = {
     "high": "High Priority",
     "moderate": "Moderate Priority",
@@ -83,7 +84,7 @@ const handleSubmit = async () => {
     dueDate: selectedDate ? selectedDate.toISOString() : null,
     priority: statusMapping[selectedPriority] || "Low Priority", 
   };
-
+  setIsSubmitting(true);
   try {
      await axios.post(`${process.env.REACT_APP_BACKEND_URL}/api/v1/task`, formattedData, {
       withCredentials: true,
@@ -96,6 +97,9 @@ const handleSubmit = async () => {
     getTasks();
   } catch (error) {
     console.error("Error adding task:", error);
+  }
+  finally { 
+    setIsSubmitting(false);
   }
 };
 
