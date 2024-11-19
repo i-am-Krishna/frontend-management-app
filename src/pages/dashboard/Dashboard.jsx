@@ -9,6 +9,8 @@ import AssignModal from '../../components/assignModel/AssignModal'
 import AddModal from '../../components/addModel/AddModal'
 import axios from 'axios'
 import { toast } from 'react-toastify'
+import Skeleton from 'react-loading-skeleton';
+import "react-loading-skeleton/dist/skeleton.css";
 
 
 
@@ -30,7 +32,7 @@ const Dashboard = () => {
   const openModal = () => setIsAssignModalOpen(true);
   const closeModal = () => setIsAssignModalOpen(false);
   const [loading, setLoading] = useState(true);
-
+  const [taskLoading, setTaskLoading] = useState(true);
 
   const handleTimeRangeChange = (e) => {
     setSelectedTimeRange(e.target.value);
@@ -58,6 +60,7 @@ const getTasks = useCallback( async () => {
   setProgressTasks(allTasks.filter(task => task.status === 'In progress'));
   setBacklogTasks(allTasks.filter(task => task.status === 'Backlog'));
   setDoneTasks(allTasks.filter(task => task.status === 'Done'));
+  setTaskLoading(false);
 }
 ,[selectedTimeRange])
   useEffect(() => { 
@@ -109,11 +112,25 @@ const getTasks = useCallback( async () => {
           <div className={styles.collapse}><img src={collapse} alt="collapse" /> </div>
           </div> 
           <div className={styles.componentData}>
-            { backlogTasks.length>0 ? 
+            {taskLoading ? (<div style={{ textAlign: "center" }}>
+                        {Array(13)
+                          .fill(0)
+                          .map((_, index) => (
+                            <Skeleton
+                              key={index}
+                              height={20}
+                              width={"95%"}
+                              style={{ display: "inline-block", margin: "5px", background:"white" }}
+                            />
+                          ))}
+                      </div>) : 
+            ( backlogTasks.length>0 ? 
               backlogTasks.map((task) => (
                 <Hero className={styles.innerComponent} key={task._id} buttons={['TO-DO','PROGRESS', 'DONE']}  onButtonClick={handleButtonClick} task={task} getTasks={getTasks} />
               ))
-            : null }
+            : null )
+            }
+            
           </div>
         </div>
       
@@ -125,10 +142,23 @@ const getTasks = useCallback( async () => {
           </div>
           <AddModal isOpen={isAddodalOpen} closeModal={closeAddModal} getTasks={getTasks}/>
           <div className={styles.componentData}>
-            {todoTasks.length>0 ?
+          {taskLoading ? (<div style={{ textAlign: "center" }}>
+                        {Array(13)
+                          .fill(0)
+                          .map((_, index) => (
+                            <Skeleton
+                              key={index}
+                              height={20}
+                              width={"95%"}
+                              style={{ display: "inline-block", margin: "5px", background:"white" }}
+                            />
+                          ))}
+                      </div>) : 
+            
+            (todoTasks.length>0 ?
               todoTasks.map((task) => (
                 <Hero className={styles.innerComponent} key={task._id} buttons={['BACKLOG','PROGRESS','DONE']}  onButtonClick={handleButtonClick} task={task} getTasks={getTasks}  />
-            )) : null}
+            )) : null)}
           </div> </div>
 
 
@@ -138,12 +168,26 @@ const getTasks = useCallback( async () => {
           <div className={styles.collapse}><img src={collapse} alt="collapse" /> </div>
           </div>
           <div className={styles.componentData}>
-            {
+
+          {taskLoading ? (<div style={{ textAlign: "center" }}>
+                        {Array(13)
+                          .fill(0)
+                          .map((_, index) => (
+                            <Skeleton
+                              key={index}
+                              height={20}
+                              width={"95%"}
+                              style={{ display: "inline-block", margin: "5px", background:"white" }}
+                            />
+                          ))}
+                      </div>) : 
+            
+            (
               progressTasks.length>0 ?
               progressTasks.map((task) => (
                 <Hero className={styles.innerComponent} key={task._id} buttons={['BACKLOG','TO-DO', 'DONE']}  onButtonClick={handleButtonClick} task={task} getTasks={getTasks} />
               )) : null
-            }
+            )}
           </div>
         </div>
 
@@ -154,13 +198,26 @@ const getTasks = useCallback( async () => {
           <div className={styles.collapse}><img src={collapse} alt="collapse"  /> </div>
           </div>
           <div className={styles.componentData}>
+          {taskLoading ? (<div style={{ textAlign: "center" }}>
+                        {Array(13)
+                          .fill(0)
+                          .map((_, index) => (
+                            <Skeleton
+                              key={index}
+                              height={20}
+                              width={"95%"}
+                              style={{ display: "inline-block", margin: "5px", background:"white" }}
+                            />
+                          ))}
+                      </div>) : 
+            
 
-            {
+            (
               doneTasks.length>0 ?
               doneTasks.map((task) => (
                 <Hero className={styles.innerComponent} key={task._id} buttons={['BACKLOG','TO-DO', 'PROGRESS']}  onButtonClick={handleButtonClick} task={task} getTasks={getTasks} />
               )) : null
-            }
+            )}
           </div></div>        
         
       </div>
