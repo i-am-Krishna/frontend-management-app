@@ -9,7 +9,6 @@ const SharedTask = () => {
   const {id} = useParams();
   const [task, setTask] = useState(null);
   const [checkList, setCheckList] = useState([]);
- 
 
   useEffect(() => {
     const fetchTask = async () => {
@@ -25,9 +24,6 @@ const SharedTask = () => {
   }, [id]);
   
   const doneTasks = checkList.filter(task => task.done).length;
-
-
-
 
   return (
     <>
@@ -49,7 +45,7 @@ const SharedTask = () => {
             <div className={styles.overflows}>
               {checkList ? checkList.map((task, ind) => (
                 <div key={task?._id} className={styles.task}>
-                  <input type="checkbox" className={styles.checkbox} defaultChecked={task?.done} readOnly /> {task?.subtask}
+                  <input type="checkbox" className={styles.checkbox} defaultChecked={task?.done} readOnly disabled /> {task?.subtask}
                 </div>
               )) : null}
             </div>

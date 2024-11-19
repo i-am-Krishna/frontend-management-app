@@ -2,12 +2,16 @@ import React, { useState } from 'react';
 import styles from './AssignModal.module.css';
 import SuccessModal from '../success/SuccessModal';
 import axios from 'axios';
+import Skeleton from 'react-loading-skeleton';
+import "react-loading-skeleton/dist/skeleton.css";
 
-const AssignModal = ({ isOpen, onClose , allUsers}) => {
+
+const AssignModal = ({ isOpen, onClose , allUsers, loading}) => {
     const [selectedItem, setSelectedItem] = useState(null);
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [email, setEmail] = useState('');
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
     if (!isOpen) return null; 
 
   
@@ -62,14 +66,29 @@ function getInitials(str) {
                     </div>
 
                     {isDropdownOpen && (
-                        <ul className={styles.dropdownList}>
-                            {allUsers.map((item) => (
+                      <ul className={styles.dropdownList}>
+                      {loading ?( 
+                        <div style={{ textAlign: "center" }}>
+                        {Array(3)
+                          .fill(0)
+                          .map((_, index) => (
+                            <Skeleton
+                              key={index}
+                              height={30}
+                              width={"97%"}
+                              style={{ display: "inline-block", margin: "1px 5px" }}
+                            />
+                          ))}
+                      </div> 
+                     ):
+                            (allUsers.map((item) => (
                                 <li key={item._id} className={styles.assignedPlace} onClick={() => handleSelect(item)}>
                                      <button className={styles.avatarPlace}>{getInitials(item.email)}</button>
                                     <span className={styles.emailNamePlace}>{item.email}</span>
                                     <button className={styles.assignButton}>Assign</button>
                                 </li>
-                            ))}
+                            )))
+                          }
                         </ul>
                     )}
                 </div>

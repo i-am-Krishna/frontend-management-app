@@ -104,13 +104,21 @@
 
 
 .checkbox{
+    background-color: blue; /* Add blue background */
+    /* opacity: 0.6; Adjust opacity to indicate it's disabled */
     border-radius: 50%;
     width: 18px;
+    margin-right: 15px;
     height: 18px;
     outline: none;
+    color:white;
+    cursor: not-allowed; /* Change cursor to indicate it's not clickable */
     color: #17A2B8;
-    margin-right: 15px;
-}
+} 
+
+/* input[type="checkbox"]:disabled {
+  } */
+  
 
 .task {
     display: flex;

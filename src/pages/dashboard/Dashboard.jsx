@@ -29,6 +29,8 @@ const Dashboard = () => {
 
   const openModal = () => setIsAssignModalOpen(true);
   const closeModal = () => setIsAssignModalOpen(false);
+  const [loading, setLoading] = useState(true);
+
 
   const handleTimeRangeChange = (e) => {
     setSelectedTimeRange(e.target.value);
@@ -41,6 +43,7 @@ const Dashboard = () => {
         try {
             const response = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/api/v1/user`,{ withCredentials: true });
             setAllUsers(response.data.users);  
+            setLoading(false);
         } catch (error) {
             console.error(error);
         }
@@ -89,7 +92,7 @@ const getTasks = useCallback( async () => {
       </div>
       <div className={styles.filterBox}>
         <div className={styles.userBoard}>Board <span onClick={openModal} className={styles.usergroupSpan}><img className={styles.usergroup} src={usergroup} alt="usergroup" /> Add People</span></div>
-        <AssignModal isOpen={isAssignModalOpen} onClose={closeModal} allUsers={allUsers} />
+        <AssignModal isOpen={isAssignModalOpen} onClose={closeModal} allUsers={allUsers} loading={loading} />
 
         <div> <select className={styles.select} id="time-range"  value={selectedTimeRange} 
         onChange={handleTimeRangeChange} name="time-range">
