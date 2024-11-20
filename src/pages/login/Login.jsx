@@ -12,6 +12,7 @@ import axios from 'axios'
 
 const Login = () => {
   const navigate = useNavigate();
+  const [loading, setLoading] = useState(false);
   const [formData,setFormData] = useState({
     email:'',
     password:''
@@ -29,16 +30,19 @@ const Login = () => {
 
   const handleLogin=async(e)=>{
     e.preventDefault();
+    setLoading(true); 
     try {
       await loginSchema.validate(formData, { abortEarly: false });
       const response = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/api/v1/user/login`, {
         email:formData.email,
-        password:formData.password},{ withCredentials: true })  
+        password:formData.password},{ withCredentials: true })
+        setLoading(false);  
         localStorage.setItem('userName',response.data.user.name)
         localStorage.setItem('userEmail',response.data.user.email)
       toast.success(response.data.message)
       navigate('/')
     } catch (err) {
+      setLoading(false);
       if (err.response && err.response.data) {
         toast.error(err.response.data.error);
       } else if (err.inner) {
@@ -68,7 +72,7 @@ const Login = () => {
 
       </div>
       <div className={styles.buttons}>
-      <button className={styles.loginRegister} onClick={handleLogin} >Login</button>
+      <button className={styles.loginRegister} onClick={handleLogin} > {loading ? 'Logging in...' : 'Login'}</button>
       <p>Have no account yet?</p>
       <Link to={'/signup'} style={{ textDecoration: 'none',width:'100%' }}><button className={styles.registerLogin}>Register</button></Link>
 

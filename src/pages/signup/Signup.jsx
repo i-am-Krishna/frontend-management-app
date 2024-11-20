@@ -11,7 +11,8 @@ import { signUpSchema } from '../../validation/validationSchema'
 import axios from 'axios'
 import { toast } from 'react-toastify'
 const Signup = () => {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
+  const [loading, setLoading] = useState(false);
   const [formData,setFormData] = useState({
     name:'',
     email:'',
@@ -29,6 +30,7 @@ const Signup = () => {
   }
 const handleSubmit=async(e)=>{
   e.preventDefault();
+  setLoading(true);
   try {
 
     await signUpSchema.validate(formData, { abortEarly: false });
@@ -37,9 +39,11 @@ const handleSubmit=async(e)=>{
       email:formData.email,
       password:formData.password},
       { withCredentials: true })  
+      setLoading(false);
     toast.success(response.data.message)
     navigate('/login')
   } catch (err) {
+    setLoading(false);
     if (err.response && err.response.data) {
       toast.error(err.response.data.error);
     } else if (err.inner) {
@@ -78,7 +82,7 @@ const handleSubmit=async(e)=>{
         {errors.confirmPassword && <p style={{ color: 'red', marginTop:'-20px', marginBottom:'5px' ,fontSize:'12px' }}>{errors.confirmPassword}</p>}
         </div>
       <div className={styles.buttons}>
-      <button className={styles.register} onClick={handleSubmit} >Register</button>
+      <button className={styles.register} onClick={handleSubmit} >{loading ? 'Registering...' : 'Register'}</button>
       <p>Have an account ?</p>
       <Link to={'/login'} style={{ textDecoration: 'none',width:'100%' }}>
       <button className={styles.login}>Login</button></Link>
